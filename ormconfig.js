@@ -25,7 +25,8 @@ switch (process.env.NODE_ENV) {
   case 'production':
     Object.assign(dbConfig, {
       type: 'postgres',
-      database: process.env.DATABASE_URL,
+      database:
+        'postgres://vneprvubwpxdun:78c6f39a947b3634372af23768c3bfdcd5b126b900e071010957301dcdb4891a@ec2-3-228-222-169.compute-1.amazonaws.com:5432/d51liku6pg6ddc',
       migrationsRun: true,
       entities: ['**/*.entity.js'],
       ssl: {
