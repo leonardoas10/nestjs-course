@@ -9,9 +9,16 @@ let dbConfig = {
 switch (process.env.NODE_ENV) {
   case 'development':
     Object.assign(dbConfig, {
-      type: 'sqlite',
-      database: 'db.sqlite',
+      // type: 'sqlite',
+      // database: 'db.sqlite',
+      type: 'mariadb',
+      host: '',
+      port: 3306,
+      username: '',
+      password: '',
+      database: '',
       entities: ['**/*.entity.js'],
+      migrationsRun: false,
     });
     break;
   case 'test':
